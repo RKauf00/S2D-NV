@@ -3,30 +3,30 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "namePrefix": {
-      "value": "s2dtest"
+      "value": "<prefix>"
     },
     "existingDomainName": {
-      "value": "devtest.local"
+      "value": "<domainName>"
     },
     "adminUsername": {
-      "value": "S2D.Manager"
+      "value": "exampleadmin"
     },
     "adminPassword": {
         "reference": {
             "keyVault": {
-              "id": "/subscriptions/10de79c9-afc9-4b60-9632-b2715b9bfdd8/resourceGroups/examplegroup/providers/Microsoft.KeyVault/vaults/s2d-kv"
+              "id": "/subscriptions/<subscription-id>/resourceGroups/examplegroup/providers/Microsoft.KeyVault/vaults/<vault-name>"
             },
-            "secretName": "Manager"
+            "secretName": "examplesecret"
         }
     },
     "existingVirtualNetworkName": {
-      "value": "vNet_DevTest"
+      "value": "<vNet>"
     },
     "existingVirtualNetworkRGName": {
-      "value": "S2D"
+      "value": "<resourceGroup>"
     },    
     "existingSubnetName": {
-      "value": "Servers"
+      "value": "<subnetName>"
     }
   }
 }
