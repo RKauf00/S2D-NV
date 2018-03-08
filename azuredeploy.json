@@ -9,7 +9,7 @@
       "metadata": {
         "description": "Naming prefix for each new resource created. 3-char min, 8-char max, lowercase alphanumeric"
       },
-	  "defaultValue": "dev"
+	  "defaultValue": "<prefix>"
     },
     "storageAccountType": {
       "type": "string",
@@ -63,14 +63,14 @@
       "metadata": {
         "description": "DNS domain name for existing Active Directory domain"
       },
-	  "defaultValue": "devtest.local"
+	  "defaultValue": "<domainName>"
     },
     "adminUsername": {
       "type": "string",
       "metadata": {
         "description": "Name of the Administrator of the existing Active Directory Domain"
       },
-	  "defaultValue": "s2d.manager"
+	  "defaultValue": "<exampleAdmin>"
     },
     "adminPassword": {
       "type": "securestring",
@@ -84,21 +84,21 @@
       "metadata": {
         "description": "Resource Group Name for the existing VNET."
       },
-      "defaultValue": "S2D"
+      "defaultValue": "<resourceGroup>"
     },
     "existingVirtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "Name of the existing VNET."
       },
-      "defaultValue": "vNet_DevTest"
+      "defaultValue": "<vNet>"
     },
     "existingSubnetName": {
       "type": "string",
       "metadata": {
         "description": "Name of the existing subnet in the existing VNET to which the S2D VMs should be deployed"
       },
-      "defaultValue": "Servers"
+      "defaultValue": "<subnetName>"
     },
     "sofsName": {
       "type": "string",
