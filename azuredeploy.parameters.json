@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namePrefix": {
+      "value": "s2dtest"
+    },
+    "existingDomainName": {
+      "value": "devtest.local"
+    },
+    "adminUsername": {
+      "value": "S2D.Manager"
+    },
+    "adminPassword": {
+        "reference": {
+            "keyVault": {
+              "id": "/subscriptions/10de79c9-afc9-4b60-9632-b2715b9bfdd8/resourceGroups/examplegroup/providers/Microsoft.KeyVault/vaults/s2d-kv"
+            },
+            "secretName": "Manager"
+        }
+    },
+    "existingVirtualNetworkName": {
+      "value": "vNet_DevTest"
+    },
+    "existingVirtualNetworkRGName": {
+      "value": "S2D"
+    },    
+    "existingSubnetName": {
+      "value": "Servers"
+    }
+  }
+}
